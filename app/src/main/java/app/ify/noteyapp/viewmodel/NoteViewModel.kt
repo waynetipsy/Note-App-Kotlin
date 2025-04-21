@@ -17,7 +17,7 @@ class NoteViewModel(private val repository: NotesRepository)
     : ViewModel() {
 
         val allNotes: LiveData<List<Note>> =
-            repository.allNote
+            repository.allNotes
     // ViewModelScope: is a coroutine scope tied to the
     // ViewModel's Lifecycle, Ensuring that any coroutines
     // launched within it are automatically canceled if

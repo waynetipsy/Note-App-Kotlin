@@ -26,7 +26,8 @@ fun NoteListItem(note: Note){
           border = BorderStroke(1.dp, Color.Black)
     ){
         Column(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .padding(12.dp)
         ){
             Text(text = "${note.title}",

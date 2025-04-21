@@ -13,16 +13,16 @@ abstract class NoteDB : RoomDatabase() {
 
     companion object {
         @Volatile
-        private var INSTANCE: NoteDB? = null
+        private var INSTANCE: NoteDB?= null
 
-        fun getInstance(context: Context): NoteDB? {
+        fun getInstance(context: Context): NoteDB {
             // ensuring that only one thread can execute the block of code inside the synchronized block at any given time
             synchronized(this) {
                 var instance = INSTANCE
                 if (instance == null){
 
                     // Creating the Database Object
-                    var instance = Room.databaseBuilder(
+                     instance = Room.databaseBuilder(
                         context = context.applicationContext,
                         NoteDB::class.java,
                         "notes_db"
